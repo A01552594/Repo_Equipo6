@@ -27,13 +27,13 @@ img2 = img2 * 255 / maxs
 img2 = img2.astype(np.uint8)
 
 plt.imshow(img, cmap='gray')
-plt.title("Vertical Edge")
+plt.title("Imagen original")
 plt.show()
 
 plt.imshow(imgray, cmap='gray')
-plt.title("Vertical Edge")
+plt.title("Imagen blanco y negro")
 plt.show()
 
 plt.imshow(img2, cmap='gray')
-plt.title("Vertical Edge")
+plt.title("Imagen con filtro")
 plt.show()
