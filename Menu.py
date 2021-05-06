@@ -1,5 +1,5 @@
 from tkinter import *
-#from filtro1 import filtro1
+from filtro import outline
 #from filtro2 import filtro2
 #from filtro3 import filtro3
 
@@ -22,7 +22,7 @@ def clicked():
     nombre = txt.get()
     
     lbl.configure(text= "Selecciona uno de los filtros de abajo")
-    boton_filtro1 = Button(window, text="Filtro 1", command=lambda: filtro1(nombre))
+    boton_filtro1 = Button(window, text="Filtro 1", command=lambda: outline(nombre))
     boton_filtro1.grid(column=0, row=1)
 
     boton_filtro2 = Button(window, text="Filtro 2", command=lambda: filtro2(nombre))
