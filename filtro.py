@@ -19,3 +19,21 @@ for x in list(range(1, forma[0] - 1)):
                 suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
 
         img2[x, y] = suma
+
+maxs = np.max(img2)
+
+img2 = img2 * 255 / maxs
+
+img2 = img2.astype(np.uint8)
+
+plt.imshow(img, cmap='gray')
+plt.title("Vertical Edge")
+plt.show()
+
+plt.imshow(imgray, cmap='gray')
+plt.title("Vertical Edge")
+plt.show()
+
+plt.imshow(img2, cmap='gray')
+plt.title("Vertical Edge")
+plt.show()
