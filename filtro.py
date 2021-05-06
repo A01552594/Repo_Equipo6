@@ -20,11 +20,10 @@ for x in list(range(1, forma[0] - 1)):
 
         img2[x, y] = suma
 
-maxs = np.max(img2)
-
-img2 = img2 * 255 / maxs
-
-img2 = img2.astype(np.uint8)
+imgfilt = np.stack(img2)
+imgfilt[imgfilt > 255] = 255
+imgfilt[imgfilt < 0] = 0
+imgfilt = imgfilt.astype("uint8")
 
 plt.imshow(img, cmap='gray')
 plt.title("Imagen original")
@@ -34,6 +33,7 @@ plt.imshow(imgray, cmap='gray')
 plt.title("Imagen blanco y negro")
 plt.show()
 
-plt.imshow(img2, cmap='gray')
-plt.title("Imagen con filtro")
+plt.imshow(imgfilt, cmap='gray')
+plt.title("Imagen con filtro 2")
 plt.show()
+
