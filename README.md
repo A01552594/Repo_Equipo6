@@ -18,8 +18,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    
   </ol>
 </details>
 
@@ -44,47 +43,31 @@ se necesita instalar
 
 ### Installation
 
-1. Python
+1. Descagar la imagen
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/A01552594/Repo_Equipo6.git
    ```
-3. Install NPM packages
+3. Install packages
    ```sh
-   npm install
+    import numpy as np
+    import cv2
+    import matplotlib.pyplot as plt
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+4. Corre el Menú 
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+* 1.  Se plotea la image original
+![original](https://user-images.githubusercontent.com/73914621/117377950-0c549b00-ae9a-11eb-8096-e085418fc2be.png)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* 2. Se plotea en blanco y negro
+![nw](https://user-images.githubusercontent.com/73914621/117377943-08c11400-ae9a-11eb-9396-298ea4a0b375.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* 3. Se plotea la imagen con filtro
+![bnw](https://user-images.githubusercontent.com/73914621/117377924-0363c980-ae9a-11eb-93b7-18365e88d0e7.png)
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
