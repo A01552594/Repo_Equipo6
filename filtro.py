@@ -2,39 +2,263 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-def outline(nombre, num):
-    img=cv2.imread(nombre)
+img=cv2.imread('Turquia.jpg') 
 
-    imgray=cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    forma = np.shape(imgray)
-    img2 = np.zeros(forma)
-    
-    kernel = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
+imgray=cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+forma = np.shape(imgray)
+img2 = np.zeros(forma)
 
-    for x in list(range(1, forma[0] - 1)):
-        for y in list(range(1, forma[1] - 1)):
-            suma = 0
 
-            for i in list(range(-1, 2)):
-                for j in list(range(-1, 2)):
-                    suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+print("Selecciona el tipo de filtro que quieres aplicar a tu imagen: ")
+print("1.- Blur")
+print("2.- Bottom Solbel")
+print("3.- Emboss")
+print("4.- Left Sobel")
+print("5.- Outline")
+print("6.- Night Sobel")
+print("7.- Sharpen")
+print("8.- Top Sobel")
+op=input()
 
-            img2[x, y] = suma
+if op=="1":
+  kernel = np.array([[0.0625, 0.125, 0.0625], [0.125, 0.25, 0.125], [0.0625, 0.125, 0.0625]])
 
-    imgfilt = np.stack(img2)
-    imgfilt[imgfilt > 255] = 255
-    imgfilt[imgfilt < 0] = 0
-    imgfilt = imgfilt.astype("uint8")
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
 
-    plt.imshow(img, cmap='gray')
-    plt.title("Imagen original")
-    plt.show()
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
 
-    plt.imshow(imgray, cmap='gray')
-    plt.title("Imagen blanco y negro")
-    plt.show()
+        img2[x, y] = suma
 
-    plt.imshow(imgfilt, cmap='gray')
-    plt.title("Imagen con filtro 2")
-    plt.show()
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
 
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Blur")
+  plt.show()
+
+elif op=="2":
+  kernel = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Bottom Solbel")
+  plt.show()
+
+elif op=="3":
+  kernel = np.array([[-2, -1, 0], [-1, 1, 1], [0, 1, 2]])
+
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Emboss")
+  plt.show()
+  
+elif op=="4":
+  kernel = np.array([[1, 0, -1], [2, 0, -2], [1, 0, -1]])
+
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Left Sobel")
+  plt.show()
+
+elif op=="5":
+  kernel = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
+
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Outline")
+  plt.show()
+
+
+
+elif op=="6":
+  kernel = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Night Sobel")
+  plt.show()
+
+elif op=="7":
+  kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Sharpen")
+  plt.show()
+
+elif op=="8":
+  kernel = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
+  for x in list(range(1, forma[0] - 1)):
+    for y in list(range(1, forma[1] - 1)):
+        suma = 0
+
+        for i in list(range(-1, 2)):
+            for j in list(range(-1, 2)):
+                suma = imgray[x - i, y - j] * kernel[i + 1, j + 1] + suma
+
+        img2[x, y] = suma
+
+  imgfilt = np.stack(img2)
+  imgfilt[imgfilt > 255] = 255
+  imgfilt[imgfilt < 0] = 0
+  imgfilt = imgfilt.astype("uint8")
+
+  plt.imshow(img, cmap='gray')
+  plt.title("Imagen original")
+  plt.show()
+
+  plt.imshow(imgray, cmap='gray')
+  plt.title("Imagen blanco y negro")
+  plt.show()
+
+  plt.imshow(imgfilt, cmap='gray')
+  plt.title("Imagen con filtro Top Sobel")
+  plt.show()
+        
+else:
+  kernel = np.array([[0, 0, 0], [0, 1, -0], [0, 0, 0]])  
