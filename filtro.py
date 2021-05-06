@@ -2,13 +2,13 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-def outline(nombre):
+def outline(nombre, num):
     img=cv2.imread(nombre)
 
     imgray=cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     forma = np.shape(imgray)
     img2 = np.zeros(forma)
-
+    
     kernel = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
 
     for x in list(range(1, forma[0] - 1)):
