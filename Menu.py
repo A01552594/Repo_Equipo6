@@ -20,7 +20,7 @@ txt.grid(column=1, row=0)
 def clicked():
    
     nombre = txt.get()
-    numero = 3
+    
     lbl.configure(text= "Selecciona uno de los filtros de abajo")
     boton_filtro1 = Button(window, text="Filtro 1", command=lambda: filtro1(nombre))
     boton_filtro1.grid(column=0, row=1)
