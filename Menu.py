@@ -35,3 +35,4 @@ btn = Button(window, text="Ok", command=clicked)
 btn.grid(column=2, row=0)
 
 window.mainloop()
+
