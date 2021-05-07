@@ -1,4 +1,13 @@
-# Repo_Equipo6
+
+# REPO EQUIPO 6
+## INFORMACIÓN DEL EQUIPO
+**ALUMNOS:**
+| Nombre  | Matricula  | Correo |  
+|--|--|-- 
+|*[Diego Padilla](https://github.com/A01552594)* |A01552594 |A01552594@itesm.mx|--|
+|*[Ricardo Caceres](https://github.com/Caceres-A01706972)* |A01706972|A01706972@itesm.mx||
+|  [*Karina Maldonado*](https://github.com/thephoeniix)| A01707516 |A01707516@itesm.mx |
+
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -36,11 +45,11 @@ Utilizamos las siguietes IDE:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Para este proyecto se necesita elegir una imagen. A partir de esto descargan los documentos y se empieza a correr el programa.
+Para este proyecto se necesita elegir una imagen. A partir de esto descargan los archivos y se empieza a correr el programa.
 
 ### Prerequisites
 
-Se necesita instalar 
+Instalar 
 * Python 3.9.5 
 
 ### Installation
@@ -62,13 +71,13 @@ Se necesita instalar
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* 1.  Se plotea la image original
+ 1.  Se plotea la image original
 ![original](https://user-images.githubusercontent.com/73914621/117377950-0c549b00-ae9a-11eb-8096-e085418fc2be.png)
 
-* 2. Se plotea en blanco y negro
+ 2. Se plotea en blanco y negro
 ![nw](https://user-images.githubusercontent.com/73914621/117377943-08c11400-ae9a-11eb-9396-298ea4a0b375.png)
 
-* 3. Se plotea la imagen con filtro
+ 3. Se plotea la imagen con filtro
 ![bnw](https://user-images.githubusercontent.com/73914621/117377924-0363c980-ae9a-11eb-93b7-18365e88d0e7.png)
 
 <!-- VIDEOS YOUTUBE -->
