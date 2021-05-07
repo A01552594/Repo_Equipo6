@@ -71,7 +71,7 @@ Se necesita instalar
 * 3. Se plotea la imagen con filtro
 ![bnw](https://user-images.githubusercontent.com/73914621/117377924-0363c980-ae9a-11eb-93b7-18365e88d0e7.png)
 
-<!-- VIDEOS ABOUT THE PROJECT -->
+<!-- VIDEOS YOUTUBE -->
 ## YOUTUBE VIDEOS ABOUT THE PROJECT
 
 
