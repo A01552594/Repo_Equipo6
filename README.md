@@ -71,6 +71,14 @@ Instalar
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+ 1.  Se plotea una ventana en donde debe colocar el nombre de la imagen junto con su extensión Ej "Turquia.jpg"
+ ![Escribir texto](https://user-images.githubusercontent.com/69566238/117466269-2339d280-af18-11eb-8dbc-ef63ff9d9155.png)
+
+ 2.  Selccione el botón "ok", el cual hará que se muestre el menu de filtros disponibles
+ ![Seleccionar filtro](https://user-images.githubusercontent.com/69566238/117466439-52e8da80-af18-11eb-8e43-8acdf1491eb0.png)
+
+ 3.  Seleccione el filtro que desea aplicar sobre su imagen y espere a que se procese su imagen (El tiempo de espera puede variar dependiendo de la calidad de la imagen)
+ 
  1.  Se plotea la image original
 ![original](https://user-images.githubusercontent.com/73914621/117377950-0c549b00-ae9a-11eb-8096-e085418fc2be.png)
 
@@ -82,4 +90,4 @@ Instalar
 
 <!-- VIDEOS YOUTUBE -->
 ## VIDEOS YOUTUBE
-
+Diego Padilla: https://youtu.be/LXbR_00L-A4 
