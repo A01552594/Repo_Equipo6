@@ -93,3 +93,5 @@ Instalar
 Diego Padilla: https://youtu.be/LXbR_00L-A4 
 
 Ricardo Cáceres: https://youtu.be/-0LX4QQNt9M
+
+Karina Maldonado: https://youtu.be/LtoDRVU2jCs
