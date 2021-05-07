@@ -38,7 +38,7 @@ Para este proyecto se necesita elegir una imagen. A partir de esto descargan los
 
 ### Prerequisites
 
-se necesita instalar 
+Se necesita instalar 
 * Python 3.9.5 
 
 ### Installation
